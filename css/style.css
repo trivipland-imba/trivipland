@@ -422,3 +422,48 @@ body {
     margin: 0;
     padding: 0;
 }
+/* ===== СБРОС СЪЕЗЖАНИЯ (ДОБАВИТЬ В КОНЕЦ) ===== */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer, section, .hero, .privileges, .cards, .card,
+.commands-section, .rules-section, .start-section, .online-section,
+.contacts-section, .faq-section, .news-section, .commands-table,
+.rules-list, .steps, .step, .footer, .hero-content, .hero-image,
+.contact-card, .faq-item, .news-article {
+    max-width: 100%;
+}
+
+img, video, iframe, .placeholder-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.btn-anarchy {
+    white-space: normal;
+    word-break: break-word;
+}
+
+.card {
+    width: auto;
+    flex: 0 1 auto;
+    max-width: 320px;
+}
+
+.command-row, .step {
+    flex-wrap: wrap;
+}
