@@ -363,3 +363,62 @@ a {
         font-size: 0.8rem;
     }
 }
+/* ========== ЭКСТРЕННЫЙ ФИКС ОТ СЪЕЗЖАНИЯ ========== */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.header, .hero, .privileges, .commands-section, .rules-section, .start-section, .online-section, .footer, .contacts-section, .faq-section, .news-section {
+    max-width: 100vw;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+/* Карточки привилегий */
+.cards {
+    justify-content: center;
+}
+
+.card {
+    width: auto;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* Таблица команд — чтобы не вылезала */
+.commands-table {
+    width: 100%;
+    max-width: 100%;
+}
+
+.command-row {
+    flex-wrap: wrap;
+    word-break: break-word;
+}
+
+/* Кнопка Анархия */
+.btn-anarchy {
+    white-space: normal;
+    display: inline-block;
+    max-width: 90vw;
+}
+
+/* Шапка — меню не разбегается */
+.nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Изображения не вылезают */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Убираем боковые отступы у body на маленьких экранах */
+body {
+    margin: 0;
+    padding: 0;
+}
