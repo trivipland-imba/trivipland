@@ -7,31 +7,50 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         .faq-section {
-            padding: 3rem 2rem;
-            max-width: 800px;
+            padding: 2rem 1.5rem;
+            max-width: 900px;
             margin: 0 auto;
         }
         .faq-section h2 {
             color: #ff5555;
             font-size: 2.2rem;
-            margin-bottom: 2rem;
             text-align: center;
+            margin-bottom: 2rem;
+        }
+        .faq-category {
+            margin-bottom: 2rem;
+        }
+        .faq-category h3 {
+            color: #ffaa00;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ff5555;
+            padding-bottom: 0.3rem;
         }
         .faq-item {
             background: #2c2c2c;
-            padding: 1.5rem;
             border-radius: 10px;
+            padding: 1.2rem;
             margin-bottom: 1rem;
             border-left: 4px solid #ffaa00;
         }
-        .faq-item h3 {
-            color: #ffaa00;
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
+        .faq-item .question {
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 0.4rem;
+            font-size: 1.1rem;
         }
-        .faq-item p {
+        .faq-item .answer {
             color: #ccc;
-            line-height: 1.5;
+            line-height: 1.6;
+        }
+        @media screen and (max-width: 600px) {
+            .faq-section {
+                padding: 1rem;
+            }
+            .faq-item {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
@@ -52,27 +71,85 @@
     <main class="faq-section">
         <h2>❓ Часто задаваемые вопросы</h2>
 
-        <div class="faq-item">
-            <h3>Как зайти на сервер?</h3>
-            <p>Запусти Minecraft 1.21.11, нажми «Сетевая игра», добавь сервер с IP: <strong>trivipland.imba.land</strong>.</p>
+        <!-- Категория: Аккаунт и вход -->
+        <div class="faq-category">
+            <h3>🔐 Аккаунт и вход</h3>
+            
+            <div class="faq-item">
+                <p class="question">Я забыл пароль от сервера / не могу войти. Что делать?</p>
+                <p class="answer">Сброс пароля производится через Discord-бота сервера. Напишите команду <code>/resetpassword</code> в канале #техподдержка и следуйте инструкциям. Если бот недоступен, создайте тикет в разделе #поддержка.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question">Как зарегистрироваться на сервере?</p>
+                <p class="answer">Зайдите на сервер, в чате введите команду <code>/register [пароль] [повтор пароля]</code>. Затем подтвердите регистрацию через email, если требуется.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question">Почему меня кикает после входа?</p>
+                <p class="answer">Возможные причины: неверная версия клиента, лаунчер не лицензионный, или ваш аккаунт заблокирован. Проверьте версию (1.20+) и свяжитесь с поддержкой через Discord.</p>
+            </div>
         </div>
 
-        <div class="faq-item">
-            <h3>Как получить привилегию?</h3>
-            <p>Выбери привилегию на главной странице, нажми «Купить» и следуй инструкциям.</p>
+        <!-- Категория: Игровой процесс -->
+        <div class="faq-category">
+            <h3>🎮 Игровой процесс</h3>
+            
+            <div class="faq-item">
+                <p class="question">Как поставить точку дома?</p>
+                <p class="answer">Используйте команду <code>/sethome [название]</code>. Вернуться домой: <code>/home [название]</code>. Лимит точек зависит от привилегии.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question">Как телепортироваться к другу?</p>
+                <p class="answer">Отправьте запрос командой <code>/tpa [ник]</code>. Друг должен принять его командой <code>/tpaccept</code>.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question">Можно ли приватить территорию?</p>
+                <p class="answer">На сервере анархия, приват работает через плагин WorldGuard только в определённых регионах. Уточните у администрации доступные регионы.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question">Как получить стартовый набор?</p>
+                <p class="answer">Пропишите <code>/kit start</code> после первого входа. Набор доступен раз в 24 часа.</p>
+            </div>
         </div>
 
-        <div class="faq-item">
-            <h3>Что делать, если меня забанили?</h3>
-            <p>Напиши в Discord сервера с описанием ситуации. Рассмотрим заявку в течение суток.</p>
+        <!-- Категория: Привилегии и оплата -->
+        <div class="faq-category">
+            <h3>💳 Привилегии и оплата</h3>
+            
+            <div class="faq-item">
+                <p class="question">Как купить привилегию?</p>
+                <p class="answer">Перейдите на <a href="index.html#privileges">главную страницу</a>, выберите нужный пакет, введите никнейм и нажмите «Купить». Вы будете перенаправлены на платёжную систему EasyDonate. После оплаты привилегия активируется автоматически.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question">Сколько времени занимает активация привилегии?</p>
+                <p class="answer">Обычно моментально, но в редких случаях до 15 минут. Если прошло больше, напишите в Discord с чеком об оплате.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question">Можно ли вернуть деньги?</p>
+                <p class="answer">Возврат средств возможен в течение 24 часов после покупки, если привилегия не была использована. Свяжитесь с администрацией.</p>
+            </div>
         </div>
 
-        <!-- ДОБАВЛЯЙ НОВЫЕ ВОПРОСЫ-ОТВЕТЫ СЮДА -->
-
+        <!-- Категория: Технические проблемы -->
+        <div class="faq-category">
+            <h3>⚙️ Технические проблемы</h3>
+            
+            <div class="faq-item">
+                <p class="question">У меня лагает сервер, что делать?</p>
+                <p class="answer">Проверьте своё интернет-соединение. Если проблема массовая, мы уведомим в Discord-канале #статус-сервера.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question">Не загружаются чанки / мир не прогружается.</p>
+                <p class="answer">Попробуйте перезайти или увеличить дальность прорисовки в настройках. Если не помогает, сообщите в техподдержку.</p>
+            </div>
+            <div class="faq-item">
+                <p class="question">Где скачать лаунчер / ресурспак?</p>
+                <p class="answer">Сервер не требует специального лаунчера — используйте официальный Minecraft 1.20+. Ресурспаки не обязательны, но вы можете установить свои.</p>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
-        <p>TriVipLand © 2026. Официальный сервер Minecraft.</p>
+        <p>TriVipLand © 2025. Неофициальный сервер Minecraft.</p>
     </footer>
 </body>
 </html>
