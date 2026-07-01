@@ -263,3 +263,103 @@ a {
 .rules-list li:last-child {
     border-bottom: none;
 }
+/* ========== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ ========== */
+
+/* Планшеты и маленькие ноутбуки (ширина меньше 900px) */
+@media screen and (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .btn-anarchy {
+        font-size: 1.4rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .cards {
+        gap: 1rem;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+/* Телефоны (ширина меньше 600px) */
+@media screen and (max-width: 600px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn-anarchy {
+        font-size: 1.2rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .privileges {
+        padding: 2rem 1rem;
+    }
+
+    .privileges h2 {
+        font-size: 1.8rem;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+
+    /* Шаги "Как начать" и другие блоки — вертикально */
+    .step {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Команды — текст не слипается */
+    .command-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    /* Подвал */
+    .footer {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+}
